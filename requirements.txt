@@ -1,0 +1,12 @@
+
+librosa
+music21
+intervaltree
+pretty_midi
+numpy
+scipy
+pickle
+h5py
+torch
+sklearn
+tqdm

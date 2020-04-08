@@ -1,0 +1,17 @@
+
+1. Download MusicNet data in .npz format from https://drive.google.com/drive/folders/11vtgfqEJukUNYvqZ6q9zFej7-S06QUSi?usp=sharing.
+
+2. Open "2. Sentiment_based_MusicComposer (All data).ipynb" file in python notebook and set the directory path for data and other experiments (output).
+
+3. Execute the "Read music files" cell. This step would generate a huge (~50GB) .hdf5 file which includes the audio, spectrogram and score features from the data. 
+
+4. To train the model, verify if CUDA (GPU) is available. If available, change the cuda = torch.device("cpu") to cuda = torch.device("cuda") in the code and execute.
+If GPU is not available, execute the code as is. 
+
+Note: The best epoch for 170 songs in our case was, 290 and BATCH_SIZE = 128. Incase, the datasize is changed, experiment with these values for hyper-paramter tuning. 
+
+5. Execute Model building (step-3 in code). verify that model.py is available in the same directory as your code for the project. 
+
+6. For model inference, change the path of input file and enter the emotion to genererate the output on. 
+
+The generated music is in .wav format which can be analyzed using the 3. EVALUATIONS.ipynb code. 
